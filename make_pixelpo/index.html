@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pixel Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. Reset và thiết lập Font */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            /* Thay link ảnh dưới đây bằng ảnh pixel art bạn thích */
+            background-image: url('./images/nen-pixel.gif');
+            background-position: center;
+            background-attachment: fixed;
+            
+            /* Bí quyết số 1: Giữ cho ảnh pixel không bị mờ khi phóng to */
+            image-rendering: pixelated; 
+            
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Lớp phủ làm tối hình nền để dễ đọc chữ */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 2. Tạo các hộp nội dung (Windows) theo phong cách Retro */
+        .retro-box {
+            background-color: #2b2b2b; /* Màu nền hộp tối */
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 30px;
+            padding: 20px;
+            
+            /* Bí quyết số 2: Viền cứng và đổ bóng vuông vức để tạo cảm giác 8-bit */
+            border: 4px solid #ffffff;
+            box-shadow: 8px 8px 0px #000000;
+        }
+
+        .retro-box h1, .retro-box h2 {
+            color: #f1c40f; /* Màu vàng retro */
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        .retro-box p, .retro-box li {
+            font-size: 12px; /* Font pixel thường khá to nên set nhỏ lại */
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        /* 3. Nút bấm (Buttons) */
+        .retro-btn {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 10px;
+            border: 2px solid #fff;
+            box-shadow: 4px 4px 0px #000;
+            cursor: pointer;
+            transition: all 0.1s; /* Chuyển động nhanh gọn kiểu game cũ */
+            margin-top: 10px;
+        }
+
+        .retro-btn:hover {
+            transform: translate(2px, 2px); /* Hiệu ứng lún nút khi hover */
+            box-shadow: 2px 2px 0px #000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        
+        <div class="retro-box">
+            <h1>HELLO WORLD!</h1>
+            <p>Xin chào, mình là một kỹ sư phần mềm.</p>
+            <p>Đam mê thiết kế mạch, lập trình nhúng và khám phá các công nghệ cốt lõi.</p>
+        </div>
+
+        <div class="retro-box">
+            <h2>SKILLS</h2>
+            <ul>
+                <li>Ngôn ngữ: C++, Java, Python</li>
+                <li>Phần cứng: Verilog, Thiết kế mạch điện tử</li>
+                <li>Khác: Thuật toán, IoT</li>
+            </ul>
+        </div>
+
+        <div class="retro-box">
+            <h2>PROJECTS</h2>
+            <p>> <strong>Bộ Thu Sóng FM:</strong> Thiết kế và chế tạo mạch thu âm thanh.</p>
+            <p>> <strong>Tối ưu hóa Thuật toán:</strong> Mở rộng tập lệnh trên kiến trúc RISC-V.</p>
+            <a href="#" class="retro-btn">XEM THÊM TRÊN GITHUB</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
